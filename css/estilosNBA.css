@@ -1,0 +1,402 @@
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	scroll-behavior:smooth;
+
+}
+body{
+	font-family:´raleway´, sans-serif;
+	font-weight:400;
+
+}
+img{
+	display :block;
+}
+header{
+	width:100%;
+	height:80px;
+	position:fixed;
+	left: 0;
+	top:calc(50vh - 50px);
+	z-index:2;
+	padding-left:100px;
+	background-color: rgba(200, 15, 46, .8);
+	display:flex;
+	justify-content:column;
+	align-items: center;
+
+}
+header img{
+	width:50px;
+
+}
+nav{                  
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+nav ul{
+	list-style:none;
+	display:flex; 
+}
+nav a{
+    text-decoration:none;
+	font-size:1.2em;
+	font-weight: 700;
+	color:rgba(26, 66, 137, 0.7);
+	margin: 0px 10px;
+    padding:10px 20px;
+    position:relative;
+	transition: all .3s;
+}
+nav a:hover{
+    color:white;
+}
+nav a::before, nav a::after{
+	position:absolute;
+	opacity:0;
+	color:white;
+	font-size:1.5em;
+	top:4px;
+	transition: all .3s;
+}
+nav a:hover::before, nav a:hover::after{
+	opacity:1;
+	transform: translateX(0);
+}
+nav a::before{
+	content:"(";
+	left: 0;
+	transform: translateX(-10px);
+}
+nav a::after{
+	content:")";
+	right:0;
+	transform:translateX(10px);
+}
+section{
+	height:100vh;
+	padding-left:100px;
+	display:grid;
+	grid-template:repeat(2, 1fr) / 100%;
+	align-items:center;
+	row-gap:100px;
+	position:fixed;
+	background-color:white;
+}
+h1{
+	font-size:3em;
+	font-weight:700;
+	color:#C80F2E;
+}
+h2{
+	font-weight:500;
+	font-size:2em;
+	color:#1D4282;
+	margin-top: 10px;
+}
+p{
+	color:#444;
+	line-height:1.5em;
+	margin-top: 5px;
+	font-weight: 500;
+}
+#uno::before{
+    content:""; 
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    background: url("img/fondo-01.jpg") no-repeat top center / cover;  
+    opacity: .2;
+    z-index: -1;
+}
+#uno img{
+	width:30vh;
+}
+#dos::before{
+    content:""; 
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    background: url("img/fondo-02.jpg") no-repeat center / cover;  
+    opacity:.2;
+    z-index: -1;
+}
+#dos img{
+	width:40%;
+	margin:5px 0;
+	padding:5px;
+	background-color:white;
+	box-shadow: 1px 1px 5px black;
+}
+#tres::before{
+    content:""; 
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    background: url("img/fondo-03.jpg") no-repeat center / cover;  
+    opacity:.2;
+    z-index: -1;
+}
+#tres div:last-child{
+	display:grid;
+	grid-template: 20vh 10vh / repeat(3, 1fr);
+	height:30vh;
+	row-gap:20px;
+	gap: 20px;
+}
+#tres div:last-child img{
+	border:3px dashed #C80F2E;
+	padding: 10px;
+	max-width:100%;
+	max-height:100%;
+	object-fit: cover;
+	filter: grayscale(100%);
+	transition: all .5s;
+}
+#tres div:last-child p{
+	font-size-adjust: 1.5em;
+	color:#1D4282;
+	font-weight: 700;
+	margin-top: 5px;
+
+}
+#tres div:last-child a:hover img{
+	filter:grayscale(0);
+} 
+/* -- pagina secundaria -- */ 
+#bird{
+	display: grid;
+	grid-template: 75px auto / repeat(2, 1fr);
+	align-items: start;
+	align-content: center;
+	gap:40px;
+}
+#bird h1{
+	grid-column: span 2;
+}
+#bird::before{
+	content:""; 
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    background:url("img/fondo-bird.jpg") no-repeat right top / cover;  
+    opacity:.2;
+    z-index: -1;
+
+}
+#bird img{
+	padding: 10px;
+	border: 1px dashed red;
+
+}
+#bird .info{
+	width:100%;
+	
+}
+.info a{
+	color:#1D4382;
+	text-decoration: none;
+	font-weight: 700;
+}
+.info a:hover{
+	color: #C84F2E;
+}
+
+.info{
+	width:80%;
+	/*max-width: 900px;*/
+}
+#uno, #dos:target, #tres:target{
+	 z-index:1;
+}
+/* menu hambuerguesa */
+
+.menu{
+	position:fixed;
+	top:100px;
+	left:100px;
+	z-index: 1;
+}
+.cerrar{
+	display: none;
+
+}
+.cerrar{
+	display: block;
+	appearance: none;
+	borde 
+}
+.abrir{
+	display: block;
+	appearance: none;
+	-webkit-appearence:none;
+	background-color:transparent;
+	border:1px solid #1D4282;
+	border-radius: 3px;
+	width: 30px;
+	padding: 5px 5px 0;
+	cursor: pointer;
+}
+.abrir:hover{
+	background-color: #C80F2E;
+}
+.abrir span{
+	display: block;
+	height: 2px;
+	background-color: ;
+}
+.abrir:hover span{
+	background-color: white;
+}
+.hamb{
+	position: fixed;
+	top: 0;
+	left: -100px;
+	padding: 40px;
+	width:calc(100% - 80px);
+	height: calc(100% - 80px);
+	background-color:#1D4282 ;
+	display:flex;
+	flex-direction:column;
+	justify-content:cenetr;
+	align-items:center;
+	opacity:.9;
+}
+.hamb ul{
+	display: block;
+	text-align: center;
+}
+.hamb li:not(:first-child){
+	margin-top: 40px;
+
+}
+.hamb a{
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.7);
+	transition: all .3s;
+	font-size: 3em;
+	font-weight: 700;
+	margin: 0px 20px;
+	padding: 20px 40px;
+	position: relative;
+}
+
+@media screen and (max-width:1250px){
+	h1{
+		font-size: 3em;
+		padding: 10px;
+    }
+    h2{
+    	font-size: 2em;
+    }
+    .info p{
+    	font-size:.9em;
+    }
+    nav ul{
+    	list-style:none;
+    	display: flex;
+    	flex-direction: column;
+    }
+    #uno img{
+    	width:30vh;
+    }
+
+}
+
+@media screen and (max-width:850px){
+	h1{
+		font-size: 2.5em;
+		padding: 10px;
+    }
+    h2{
+    	font-size: 2em;
+    }
+    .info p{
+    	font-size:.6em;
+    }
+    nav ul{
+    	list-style:none;
+    	display: flex;
+    	flex-direction: column;
+    }
+    #uno img{
+    	width:20vh;
+    }
+
+}
+@media screen and (max-width:500px){
+    h1{
+		font-size:1.5em;
+    }
+    h2{
+    	font-size:1.5em;
+    }
+    .info p{
+    	font-size: .6em;
+     
+    }
+    nav ul{
+    	list-style:none;
+    	display: flex;
+    }
+    nav a{
+    	font-size:1em;
+    	height: 100px;
+    }
+    #uno img{
+    	width:15vh;
+    }
+    #tres div:last-child img{
+    	padding: 5px;
+    }
+    #dos img{
+       width:80%;
+	   margin:5px 0;
+	   padding:5px;
+	   background-color:white;
+	   box-shadow: 1px 1px 5px black;
+
+	 }
+	
+}
+@media screen and (max-width:400px){
+       h1{
+		font-size:1em;
+    }
+    h2{
+    	font-size:1.5em;
+    }
+    .info p{
+    	font-size: .6em;
+     
+    }
+    nav ul{
+    	list-style:none;
+    	display: flex;
+    }
+    nav a{
+    	font-size:1em;
+    	height: 100px;
+    }
+    #uno img{
+    	width:15vh;
+    }
+    #tres div:last-child img{
+    	padding: 5px;
+    }
+    #dos img{
+       width:80%;
+	   margin:5px 0;
+	   padding:5px;
+	   background-color:white;
+	   box-shadow: 1px 1px 5px black;
+
+	 }
+}
+        
+
+
+
