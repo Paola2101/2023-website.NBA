@@ -78,7 +78,7 @@ nav a::after{
 }
 section{
 	height:100vh;
-	padding-left:100px;
+	padding-left:80px;
 	display:grid;
 	grid-template:repeat(2, 1fr) / 100%;
 	align-items:center;
@@ -87,7 +87,7 @@ section{
 	background-color:white;
 }
 h1{
-	font-size:3em;
+	font-size:3.5em;
 	font-weight:700;
 	color:#C80F2E;
 }
@@ -101,7 +101,7 @@ p{
 	color:#444;
 	line-height:1.5em;
 	margin-top: 5px;
-	font-weight: 500;
+	font-weight: 600;
 }
 #uno::before{
     content:""; 
@@ -113,14 +113,14 @@ p{
     z-index: -1;
 }
 #uno img{
-	width:30vh;
+	width:40vh;
 }
 #dos::before{
     content:""; 
     height:100vh;
     width:100vw;
     position:absolute;
-    background: url("img/fondo-02.jpg") no-repeat center / cover;  
+    background: url("img/fondo-02.jpg") no-repeat  center / cover;  
     opacity:.2;
     z-index: -1;
 }
@@ -363,7 +363,7 @@ p{
 	
 }
 @media screen and (max-width:400px){
-       h1{
+    h1{
 		font-size:1em;
     }
     h2{
