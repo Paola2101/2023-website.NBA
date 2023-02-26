@@ -100,8 +100,8 @@ h2{
 p{
 	color:#444;
 	line-height:1.5em;
-	margin-top: 4px;
-	font-weight: 500;
+	margin-top: 10px;
+	font-weight: 600;
 }
 #uno::before{
     content:""; 
@@ -166,35 +166,41 @@ p{
 #tres div:last-child a:hover img{
 	filter:grayscale(0);
 } 
+.brackets:hover{
+	color:white;
+}
+/* efectos en los enlaces */
+.brackets:before, .brackets:after{
+    position: absolute;
+    opacity: 0;
+    color:white;
+    font-size: 1.5em;
+    top:4px;
+    transition: all 0.3s;
+}
+.brackets:before{
+    content: '(';
+    left: 0;
+    transform: translateX(20px);
+}
+.brackets:after{
+    content: ')';
+    right: 0;
+    transform: translateX(-20px);
+}
+.brackets:hover:before, .brackets:hover:after{
+    opacity:1;
+    transform: translateX(0);
+}
 /* -- pagina secundaria -- */ 
 #bird{
-	display: grid;
-	grid-template: 75px auto / repeat(2, 1fr);
-	align-items: start;
-	align-content: center;
-	gap:40px;
-}
-#bird h1{
-	grid-column: span 2;
-}
-#bird::before{
-	content:""; 
-    height:100vh;
-    width:100vw;
-    position:absolute;
-    background:url("img/fondo-bird.jpg") no-repeat right top / cover;  
-    opacity:.2;
-    z-index: -1;
-
+	background: url("../img/bird-02.jpg") no-repeat center top / cover;
 }
 #bird img{
+	width:60%;
+	margin-left:90px;
 	padding: 10px;
-	border: 1px dashed red;
-
-}
-#bird .info{
-	width:100%;
-	
+	border: 2px dashed red;
 }
 .info a{
 	color:#1D4382;
