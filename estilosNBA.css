@@ -14,6 +14,83 @@ body{
 img{
 	display :block;
 }
+/* MENÚ HAMBURGUESA */
+.abrir{
+	display:block;
+	appearance:none;
+	-webkit-appearance:none;
+	background-color:transparent;
+	border:1px solid #C80F2E;
+	border-radius:5px;
+	width:30px;
+	padding:5px 5px 0;
+	cursor:pointer;
+	position:fixed;
+	top:40px;
+	right:40px;
+	transition:all .5s;
+	z-index: 1;
+}
+.abrir:hover{
+	background-color:#C80F2E;
+}
+.abrir span{
+	display:block;
+	height:2px;
+	background-color:#C80F2E;
+	margin-bottom:5px;
+}
+.abrir:hover span{
+	background-color: white;
+}
+.hamb{
+	width:100%;
+	height:100vh;
+	position:fixed;
+	top:0;
+	left:0;
+	background-color:#1D4289;
+	flex-direction:column;
+	justify-content:center;
+	opacity:.8;
+	display:none;
+	z-index: 1;
+}
+.hamb ul{
+	display:block;
+	text-align:center;
+}
+.hamb li:not(:first-child){
+	margin-top:40px;
+}
+.hamb a{
+	color: rgba(255, 255, 255, 0.7);
+    font-size: 3em;
+    padding: 20px 40px;
+}
+.cerrar{
+	display:block;
+	appearance:none;
+	-webkit-appearance:none;
+	border:none;
+	background-color:transparent;
+	color:rgba(255, 255, 255, 0.7);
+	font-size:2em;
+	position:absolute;
+	top:20px;
+	right:20px;
+	cursor:pointer;
+	transition: all .5s;
+}
+.cerrar:hover{
+	color:white;
+}
+.desplegado{
+	display:flex;
+}
+.blur{
+	filter:blur(4px);
+}
 header{
 	width:100%;
 	height:80px;
@@ -166,10 +243,10 @@ p{
 #tres div:last-child a:hover img{
 	filter:grayscale(0);
 } 
+/* efectos en los enlaces */
 .brackets:hover{
 	color:white;
 }
-/* efectos en los enlaces */
 .brackets:before, .brackets:after{
     position: absolute;
     opacity: 0;
@@ -218,78 +295,6 @@ p{
 #uno, #dos:target, #tres:target{
 	 z-index:1;
 }
-/* menu hambuerguesa */
-
-.menu{
-	position:fixed;
-	top:100px;
-	left:100px;
-	z-index: 1;
-}
-.cerrar{
-	display: none;
-
-}
-.cerrar{
-	display: block;
-	appearance: none;
-	borde 
-}
-.abrir{
-	display: block;
-	appearance: none;
-	-webkit-appearence:none;
-	background-color:transparent;
-	border:1px solid #1D4282;
-	border-radius: 3px;
-	width: 30px;
-	padding: 5px 5px 0;
-	cursor: pointer;
-}
-.abrir:hover{
-	background-color: #C80F2E;
-}
-.abrir span{
-	display: block;
-	height: 2px;
-	background-color: ;
-}
-.abrir:hover span{
-	background-color: white;
-}
-.hamb{
-	position: fixed;
-	top: 0;
-	left: -100px;
-	padding: 40px;
-	width:calc(100% - 80px);
-	height: calc(100% - 80px);
-	background-color:#1D4282 ;
-	display:flex;
-	flex-direction:column;
-	justify-content:cenetr;
-	align-items:center;
-	opacity:.9;
-}
-.hamb ul{
-	display: block;
-	text-align: center;
-}
-.hamb li:not(:first-child){
-	margin-top: 40px;
-
-}
-.hamb a{
-	text-decoration: none;
-	color: rgba(255, 255, 255, 0.7);
-	transition: all .3s;
-	font-size: 3em;
-	font-weight: 700;
-	margin: 0px 20px;
-	padding: 20px 40px;
-	position: relative;
-}
-
 @media screen and (max-width:1250px){
 	h1{
 		font-size: 3em;
@@ -402,7 +407,38 @@ p{
 
 	 }
 }
-        
+@media screen and (max-width 200px){
+	h1{
+		font-size:1em;
+    }
+    h2{
+    	font-size:1.5em;
+    }
+    .info p{
+    	font-size: .4em;
+     
+    }
+    nav ul{
+    	list-style:none;
+    	display: flex;
+    }
+    nav a{
+    	font-size:1em;
+    	height: 100px;
+    }
+    #uno img{
+    	width:15vh;
+    }
+    #tres div:last-child img{
+    	padding: 5px;
+    }
+    #dos img{
+       width:80%;
+	   margin:5px 0;
+	   padding:5px;
+	   background-color:white;
+	   box-shadow: 1px 1px 5px black;
+}        
 
 
 
