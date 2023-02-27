@@ -91,6 +91,7 @@ img{
 .blur{
 	filter:blur(4px);
 }
+/*--menu cabecera--*/
 header{
 	width:100%;
 	height:80px;
@@ -153,6 +154,8 @@ nav a::after{
 	right:0;
 	transform:translateX(10px);
 }
+/*--secciones--*/
+
 section{
 	height:100vh;
 	padding-left:80px;
@@ -279,6 +282,7 @@ p{
 	padding: 10px;
 	border: 2px dashed red;
 }
+
 .info a{
 	color:#1D4382;
 	text-decoration: none;
@@ -295,6 +299,7 @@ p{
 #uno, #dos:target, #tres:target{
 	 z-index:1;
 }
+/*--condicionales--*/
 @media screen and (max-width:1250px){
 	h1{
 		font-size: 3em;
@@ -407,7 +412,7 @@ p{
 
 	 }
 }
-@media screen and (max-width 200px){
+@media screen and (max-width:380px){
 	h1{
 		font-size:1em;
     }
@@ -415,23 +420,22 @@ p{
     	font-size:1.5em;
     }
     .info p{
-    	font-size: .4em;
+    	font-size: .5em;
      
     }
     nav ul{
     	list-style:none;
-    	display: flex;
     }
     nav a{
-    	font-size:1em;
+    	font-size:16px;
     	height: 100px;
-    }
+    }/*
     #uno img{
-    	width:15vh;
+    	width:15vh;*/
     }
     #tres div:last-child img{
     	padding: 5px;
-    }
+    }/*
     #dos img{
        width:80%;
 	   margin:5px 0;
